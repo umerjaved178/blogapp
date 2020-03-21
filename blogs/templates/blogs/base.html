@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Blog App</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'blogs/style.css' %}">
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<div class="nav-left">
+				<a href="{% url 'home' %}"><h1>Blogs Posts</h1></a>
+				</div>
+				<div class="nav-right">
+					<a href="{% url 'newForm' %}">+ New Blog Post</a>
+				</div>
+			</header>
+		
+
+		{%block content %}
+
+		{%endblock%}
+		</div>
+	</body>
+</html>

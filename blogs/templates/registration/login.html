@@ -1,0 +1,14 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+
+	<h1>System Login</h1>
+	<form method="POST">
+		{%csrf_token%}
+		{{form.as_p}}
+		<button>Login</button>
+	</form>
+	<br>
+	<a href="{% url 'register' %}">Register</a>
+
+{% endblock %}

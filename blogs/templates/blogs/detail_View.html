@@ -1,0 +1,20 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+
+
+<h3>{{postDetail.title}}</h3> by <b>{{postDetail.author}}</b>
+<p>{{postDetail.description}}</p>
+<br>
+<div>
+	<a href="{% url 'edit' postDetail.id %}">+Edit</a>
+	<br>
+	<a href="{% url 'delete' postDetail.id %}">+Delete </a>
+
+
+</div>
+
+
+
+
+{% endblock %}

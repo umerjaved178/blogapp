@@ -1,0 +1,14 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+<h3>Edit Mode</h3>
+<form method="POST">
+	{%csrf_token%}
+	
+	{{form}}
+	<input type="submit" value="Update">
+	
+
+</form>
+
+{% endblock %}
